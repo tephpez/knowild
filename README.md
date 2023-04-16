@@ -43,6 +43,8 @@ Spend less time hunting and more time gathering with Knowild! <br>
 - `Fork` and `Clone`
 -  navigate to the cloned repo
 - `npm i`
+- `npm i react-router-dom`
+- `npm i axios`
 - `npm start`
 
 ## CREDITS/RESOURCES
