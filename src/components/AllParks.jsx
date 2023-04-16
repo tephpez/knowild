@@ -1,6 +1,6 @@
 import React from "react";
 
-function Parks() {
+function AllParks() {
   return (
     <>
       <div className="basket scroll">
@@ -34,7 +34,7 @@ function Parks() {
   );
 }
 
-export default Parks;
+export default AllParks;
 
 //  SETUP    //////////////////////////////////////////////////////////////////////////////////////////////
 //  CODE

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Client } from '../services/api'
 
-const AddPark = () => {
+const EditProfile = () => {
   
   return (
     <div>
@@ -12,4 +12,4 @@ const AddPark = () => {
   );
 };
 
-export default AddPark; 
+export default EditProfile; 

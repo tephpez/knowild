@@ -53,15 +53,15 @@ const Home = ({ findsContent }) => {
             <span id="category-title"> seeds </span>
           </div>
         </Link>
-      </div>
-
-      <div className="section-container home" id="locations">
+      </div><br></br>
+      <hr style={{borderColor:"#AB8A75", width:"85%"}}></hr><br></br>
+      <div className="section-container" id="locations">
       {finds.map((find, index) => ( 
-        <div className="park-card" key={index} onClick={() => showDetails(find.userId, find.id)}>
+        <div className="category-card park" key={index} onClick={() => showDetails(find.userId, find.id)}>
           <p className="park-card-title">{find.name}</p>
         </div>
           )) 
-          .slice(0, 4)
+          .slice(0, 3)
         } 
       </div>
     </>

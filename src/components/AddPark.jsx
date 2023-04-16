@@ -52,7 +52,7 @@ const AddPark = () => {
                   required
                   type="text"
                   id="park-name"
-                  name="parkName"
+                  name="name"
                   value={formValues.name}
                   onChange={handleChange}
                   className="form-input"
@@ -69,7 +69,7 @@ const AddPark = () => {
                   required
                   type="text"
                   id="park-address"
-                  name="parkAddress"
+                  name="address"
                   value={formValues.address}
                   onChange={handleChange}
                   className="form-input"
@@ -158,7 +158,7 @@ const AddPark = () => {
                   required
                   type="text"
                   id="park-pic"
-                  name="parkPic"
+                  name="parkImg"
                   value={formValues.parkImg}
                   onChange={handleChange}
                   className="form-input"
@@ -173,7 +173,7 @@ const AddPark = () => {
         </div>
       </div>
       <div>
-        <img id="forager-img" src={forager} alt="foragerImg" />
+        <img className="forager-img" src={forager} alt="foragerImg" />
       </div>
     </div>
   );

@@ -207,7 +207,7 @@ const AddFind = () => {
                   required
                   type="text"
                   id="find-map"
-                  name="findMap"
+                  name="mapsLink"
                   value={formValues.mapsLink}
                   onChange={handleChange}
                   className="form-input"
@@ -224,7 +224,7 @@ const AddFind = () => {
                   required
                   type="text"
                   id="location-description"
-                  name="locationDescription"
+                  name="locationDesc"
                   value={formValues.locationDesc}
                   onChange={handleChange}
                   className="form-input"
@@ -272,7 +272,7 @@ const AddFind = () => {
         </div>
       </div>
       <div>
-        <img id="forager-img" src={forager} alt="foragerImg" />
+        <img className="forager-img" src={forager} alt="forager-img" />
       </div>
     </div>
   );

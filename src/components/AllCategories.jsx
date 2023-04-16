@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Categories() {
+function AllCategories() {
   return (
     <>
       <div className="basket scroll">
@@ -152,7 +152,7 @@ function Categories() {
   );
 }
 
-export default Categories;
+export default AllCategories;
 
 //  SETUP    //////////////////////////////////////////////////////////////////////////////////////////////
 //  CODE

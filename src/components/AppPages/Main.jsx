@@ -3,13 +3,13 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 
 import Basket from "../Basket";
 import Home from "../Home";
-import Parks from "../Parks";
+import Parks from "../AllParks";
 import Nav from "./Nav";
-import Categories from "../Categories";
+import Categories from "../AllCategories";
 import AddFind from "../AddFind";
 import AddPark from "../AddPark";
-import FindsDetails from "../FindsDetails"
-import ParkDetails from "../ParkDetails"
+import FindsDetails from "../DetailsFinds"
+import ParkDetails from "../DetailsParks"
 import EditFind from "../EditFind";
 
 import Mushrooms from "../CategoryPages/Mushrooms";
@@ -48,11 +48,12 @@ const Main = ({ findsContent }) => {
           <Route path="/my-basket" element={<Basket findsContent={findsContent}/>}/>
           <Route path="/parks" element={<Parks />}/>
           <Route path="/all-finds" element={<Categories findsContent={findsContent} />}/>
-          <Route path="/add-find" element={<AddFind />}/>
+          <Route path="/add-find" element={<AddFind  findsContent={findsContent}/>}/>
           <Route path="/add-park" element={<AddPark />}/>
-          <Route path="/all-finds/details" element={<FindsDetails />}/>
+          <Route path="/all-finds/details" element={<FindsDetails  findsContent={findsContent}/>}/>
           <Route path="/parks/park-info" element={<ParkDetails />}/>
-          <Route path="/edit-find" element={<EditFind />}/>
+          <Route path="/edit-find" element={<EditFind findsContent={findsContent}/>}/>
+
           <Route path="/mushrooms" element={<Mushrooms findsContent={findsContent} />}/>
           <Route path="/flowers" element={<Flowers findsContent={findsContent} />}/>
           <Route path="/fruits" element={<Fruits findsContent={findsContent} />}/>
