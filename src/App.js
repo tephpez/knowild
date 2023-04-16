@@ -31,7 +31,8 @@ function App() {
     landmarks: "",
   });
 
-  const { id } = useParams();
+  
+  const { findId } = useParams();
   let navigate = useNavigate();
 
   const getData = () => {
@@ -46,34 +47,82 @@ function App() {
   }, []);
 
 
-  const handleDelete = (id) => {
-    // console.log(id);
-    Client.delete(`/api/finds/${id}`).then(() => {
-      getData();
+  // const handleDelete = (findId) => {
+  //   // console.log(id);
+  //   Client.delete(`/api/finds/${findId}`).then(() => {
+  //     getData();
+  //   });
+  // };
+
+  // const handleChange = (e) => {
+  //   setFindsFormData ({ ...findsFormData, [e.target.id]: e.target.value });
+  // };
+
+  // const handleSubmit = async (e, findId) => {
+  //   e.preventDefault();
+  //   Client.put(`/api/finds/${findId}`, findsFormData).then(() => {
+  //     navigate("/basket");
+  //     getData();
+  //   });
+  // };
+
+
+  ///////////////////// PARKS
+
+  const [parksContent, setParksContent] = useState ([]);
+  // const [updatePark, setUpdatePark] = useState ([]);
+  // const [parkFormData, setParkFormData] = useState ({
+    
+  // });
+
+  const { parkId } = useParams();
+
+  const getParksData = () => {
+    Client.get(`/api/parks`).then((res) => {
+      // console.log(res.data)
+      setParksContent(res.data);
     });
   };
+  
+  useEffect(() => {
+    getParksData();
+  }, []);
 
-  const handleChange = (e) => {
-    setFindsFormData ({ ...findsFormData, [e.target.id]: e.target.value });
-  };
 
-  const handleSubmit = async (e, id) => {
-    e.preventDefault();
-    Client.put(`/api/finds/${id}`, findsFormData).then(() => {
-      navigate("/basket");
-      getData();
-    });
-  };
+  // const handleDelete = (id) => {
+  //   // console.log(id);
+  //   Client.delete(`/api/finds/${id}`).then(() => {
+  //     getData();
+  //   });
+  // };
 
+  // const handleChange = (e) => {
+  //   setFindsFormData ({ ...findsFormData, [e.target.id]: e.target.value });
+  // };
+
+  // const handleSubmit = async (e, id) => {
+  //   e.preventDefault();
+  //   Client.put(`/api/finds/${id}`, findsFormData).then(() => {
+  //     navigate("/basket");
+  //     getData();
+  //   });
+  // };
+
+// console.log(findsContent)
   return (
     <div id="app">
       <Header/>
       <Main 
         findsContent={ findsContent }
-        updateFind={ updateFind }
-        findsFormData={ findsFormData }
-        handleSubmit={ handleSubmit }
-        handleChange={ handleChange }
+        // updateFind={ updateFind }
+        // findsFormData={ findsFormData }
+        // handleSubmit={ handleSubmit }
+        // handleChange={ handleChange }
+
+        parksContent={ parksContent }
+        // updatePark={ updatePark }
+        // parksFormData={ parksFormData }
+
         />
       <Footer/>
     </div>

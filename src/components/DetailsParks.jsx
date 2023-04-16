@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import sunflower from "../assets/sunflower.png";
 
-const DetailsParks = (props) => {
+const DetailsParks = ({ parksContent }) => {
+  const { parkId } = useParams();
+  
   const [parkDetails, setParkDetails] = useState([null]);
+  // const []
 
   /* useEffect(() => {
      const getSelectedFind = async () =>{
@@ -18,6 +21,29 @@ const DetailsParks = (props) => {
      getSelectedFind();
    }, [id, props.findContent]);
 */
+
+// {parks.map((park, index) => ( 
+//   <div className="category-card park" key={index} onClick={() => showParkDetails(park.id)}>
+//     <p className="park-card-title">{park.name}</p>
+//   </div>
+//     )) 
+//     .slice(0, 3)
+//   } 
+
+  useEffect(() => {
+    const getSelectedPark = async () => {
+      if (parksContent && parksContent.length>0) {
+        let selectedPark = parksContent.find(
+          (parks) => parks.id === parseInt(parkId)
+        );
+        setParkDetails(selectedPark);
+      }
+    }
+    getSelectedPark();
+  }, [parkId, parksContent]);
+
+
+console.log(parkDetails)
   return (
     <div className="details-page">
       <div className="details-container">
@@ -51,18 +77,15 @@ const DetailsParks = (props) => {
         <div className="section-container basket details" id="find-info">
           <div>
             <span className="find-key">DATE FOUND:</span>
-            <span className="find-value"> date goes here </span>
-            <span className="find-value"> {parkDetails.dateFound} </span>
+            <span className="find-value"> {parkDetails.name} </span>
             <br></br>
             <br></br>
             <span className="find-key">BENEFITS:</span>
-            <span className="find-value"> benefits info goes here </span>
-            <span className="find-value"> {parkDetails.benefits} </span>
+            <span className="find-value"> {parkDetails.hours} </span>
             <br></br>
             <br></br>
             <span className="find-key">POISON WARNING:</span>
-            <span className="find-value"> toxicity info goes here </span>
-            <span className="find-value"> {parkDetails.poisonWarning} </span>
+            <span className="find-value"> {parkDetails.address} </span>
             <br></br>
             <br></br>
             <span className="find-key">NOTES: </span>

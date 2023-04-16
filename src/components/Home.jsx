@@ -1,23 +1,24 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const Home = ({ findsContent }) => {
-  const [finds, setFinds] = useState([]);
-  
+const Home = ({ parksContent }) => {
+  // const [finds, setFinds] = useState([]);
+  const [parks, setParks] = useState([]);
+   
   let navigate = useNavigate()
-
+  
   useEffect(() => {
-    const getSelectedFind = async () => {
-      if (findsContent) {
-        let selectedFind = findsContent
-        setFinds(selectedFind);
+    const getSelectedPark = async () => {
+      if (parksContent) {
+        let selectedPark = parksContent
+        setParks(selectedPark);
       }
     };
-    getSelectedFind();
-  }, [findsContent]);
+    getSelectedPark();
+  }, [parksContent]);
 
-  const showDetails = (userId, findId) => {
-    navigate(`/finds/${userId}/${findId}`);
+  const showParkDetails = (parkId) => {
+    navigate(`/parks/${parkId}`);
   };
 
   return (
@@ -56,9 +57,9 @@ const Home = ({ findsContent }) => {
       </div><br></br>
       <hr style={{borderColor:"#AB8A75", width:"85%"}}></hr><br></br>
       <div className="section-container" id="locations">
-      {finds.map((find, index) => ( 
-        <div className="category-card park" key={index} onClick={() => showDetails(find.userId, find.id)}>
-          <p className="park-card-title">{find.name}</p>
+      {parks.map((park, index) => ( 
+        <div className="category-card park" key={index} onClick={() => showParkDetails(park.id)}>
+          <p className="park-card-title">{park.name}</p>
         </div>
           )) 
           .slice(0, 3)
@@ -70,7 +71,7 @@ const Home = ({ findsContent }) => {
 
 export default Home;
 // {parks.map((park, index) => ( 
-// <div className="park-card" key={index} onClick={() => showParkDetails(find.userId, find.id)}> 
+// <div className="park-card" key={index} onClick={() => showparkDetails(find.userId, find.id)}> 
 // <p className="park-card-title">{find.name}</p>
 
 
@@ -83,3 +84,19 @@ export default Home;
 // sequelize model:generate --name User --attributes name:string,password:string,currentLocation:string,profPic:text
 // sequelize model:generate --name Park --attributes name:string,mapUrl:text,hours:text,state:string,address:string,city:string,state:string
 // sequelize model:generate --name Find --attributes commonName:string,botanicalName:string,benefits:text,category:string,poisonWarning:string,dateFound:dateOnly,notes:text,picOne:text,picTwo:text,picThree:text,picFour:text,picFive:text,mapsLink:text,abundanceRating:integer,locationDesc:text,landmarks:string,userId:integer,parkId:integer
+
+
+
+  // useEffect(() => {
+  //   const getSelectedFind = async () => {
+  //     if (findsContent) {
+  //       let selectedFind = findsContent
+  //       setFinds(selectedFind);
+  //     }
+  //   };
+  //   getSelectedFind();
+  // }, [findsContent]);
+
+  // const showFindDetails = (userId, findId) => {
+  //   navigate(`/finds/${userId}/${findId}`);
+  // };
