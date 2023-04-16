@@ -1,15 +1,17 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const FindPage = () => {
 
-  // const findType = window.location.href
 
   return (
-
-
     <>
-      <div id="component-format">{}</div>
+
+    <Link to="/all-finds">
+    <button className="app-btn earth"> all finds </button>
+  </Link>
+
+
     </>
   );
 }

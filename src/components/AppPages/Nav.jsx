@@ -14,7 +14,7 @@ function Nav() {
         <button className="app-btn earth"> all finds </button>
       </Link>
 
-      <Link to="/locations">
+      <Link to="/parks">
         <button className="app-btn earth"> locations </button>
       </Link>
 

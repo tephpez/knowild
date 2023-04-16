@@ -1,3 +1,4 @@
+//
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Client } from "../services/api";
@@ -9,18 +10,18 @@ const AddFind = () => {
   let id = 1;
   const [createFind, setCreateFind] = useState([]);
   const [formValues, setFormValues] = useState({
-    commonName: "", 
-    botanicalName: "", 
-    benefits: "", 
+    commonName: "", //
+    botanicalName: "", //
+    benefits: "", //
     category: "", 
-    poisonWarning: "", 
-    dateFound: "", 
-    notes: "", 
-    picOne: "",
-    mapsLink: "", 
-    abundanceRating: "", 
-    locationDesc: "",
-    landmarks: "",
+    poisonWarning: "", //
+    dateFound: "", //
+    notes: "", //
+    picOne: "", //
+    mapsLink: "", //
+    abundanceRating: "", //
+    locationDesc: "",  //
+    landmarks: "",  //
     username: "",
   });
 

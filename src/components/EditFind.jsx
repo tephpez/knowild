@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { Client } from '../services/api'
 
-const EditPark = () => {
+const EditFind = () => {
   
   return (
     <div>
   
-  EDIT PARKS
+  EDIT FIND
   
   </div>
   );
 };
 
-export default EditPark; 
+export default EditFind; 
