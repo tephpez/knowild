@@ -176,7 +176,7 @@ const AddFind = ({ findsContent, parksContent }) => {
               >
                 <option value=""></option>
                 {console.log(parksContent)}
-                {parksContent.map((park, index) => (
+                {parksContent.map((park) => (
                     <option value={park.id}> {park.name} </option>
                     ))}
               </select>

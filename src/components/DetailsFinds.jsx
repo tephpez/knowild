@@ -3,25 +3,24 @@ import { Link, useParams } from "react-router-dom";
 
 import sunflower from "../assets/sunflower.png";
 
-const DetailsFinds = ({ findsContent }) => {
+const DetailsFinds = ( props ) => {
   const [findDetails, setFindDetails] = useState([null]);
 
   let { findId } = useParams();
 
   useEffect(() => {
-    const getSelectedFind = async () =>{
-      if (findsContent && findsContent.length > 0){
-      let selectedFind = findsContent.find(
-        (find) => find.id === parseInt(findId)
-      );
-      setFindDetails(selectedFind);
+    const getSelectedFind = async () => {
+      if (props.findsContent && props.findsContent.length > 0) {
+        let selectedFind = props.findsContent.find(
+          (find) => find.id === parseInt(findId)
+        );
+        setFindDetails(selectedFind);
+      }
     };
-  }   
     getSelectedFind();
-  }, [findId, findsContent]);
+  }, [findId, props.findsContent]);
 
-
-return (
+  return (
     <div className="details-page">
       <div className="details-container">
         <Link to="/category">
@@ -37,13 +36,23 @@ return (
             <hr></hr>
             <div className="userInfo botanical">
               <div>
-                <span className="find-value"> {findDetails.botanicalName} </span>
+                <span className="find-value">
+                  {" "}
+                  {findDetails.botanicalName}{" "}
+                </span>
               </div>
               <br></br>
 
               <Link to="/edit-find">
                 <button className="app-btn earth"> edit find </button>
               </Link>
+              <button
+                className="app-btn rust"
+                id="btn-delete"
+                onClick={() => props.handleDelete(findDetails.id)}
+              >
+                DELETE
+              </button>
             </div>
           </div>
           <br></br>
@@ -72,7 +81,10 @@ return (
         <div className="section-container basket details" id="location-info">
           <div>
             <span className="find-key">ABUNDANCE RATING: </span>
-            <span className="find-value"> {findDetails.abundanceRating}/10 </span>
+            <span className="find-value">
+              {" "}
+              {findDetails.abundanceRating}/10{" "}
+            </span>
 
             <br></br>
             <br></br>
@@ -87,11 +99,17 @@ return (
             <br></br>
             <br></br>
           </div>
-          <a href={findDetails.mapsLink} className="button"><button className="app-btn rust submit"> FIND ME </button></a>
+          <a href={findDetails.mapsLink} className="button">
+            <button className="app-btn rust submit"> FIND ME </button>
+          </a>
         </div>
       </div>
       <div>
-        <img className="forager-img sunflower" src={sunflower} alt="sunflower-img" />
+        <img
+          className="forager-img sunflower"
+          src={sunflower}
+          alt="sunflower-img"
+        />
       </div>
     </div>
   );

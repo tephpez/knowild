@@ -33,6 +33,7 @@ function App() {
 
   
   const { findId } = useParams();
+
   let navigate = useNavigate();
 
   const getData = () => {
@@ -47,12 +48,13 @@ function App() {
   }, []);
 
 
-  // const handleDelete = (findId) => {
-  //   // console.log(id);
-  //   Client.delete(`/api/finds/${findId}`).then(() => {
-  //     getData();
-  //   });
-  // };
+  const handleDelete = (findId) => {
+    // console.log(id);
+    Client.delete(`/api/finds/${findId}`).then(() => {
+      getData();
+    });
+    navigate("/finds");
+  };
 
   // const handleChange = (e) => {
   //   setFindsFormData ({ ...findsFormData, [e.target.id]: e.target.value });
@@ -89,12 +91,6 @@ function App() {
   }, []);
 
 
-  // const handleDelete = (id) => {
-  //   // console.log(id);
-  //   Client.delete(`/api/finds/${id}`).then(() => {
-  //     getData();
-  //   });
-  // };
 
   // const handleChange = (e) => {
   //   setFindsFormData ({ ...findsFormData, [e.target.id]: e.target.value });
@@ -114,6 +110,8 @@ function App() {
       <Header/>
       <Main 
         findsContent={ findsContent }
+        handleDelete={ handleDelete }
+
         // updateFind={ updateFind }
         // findsFormData={ findsFormData }
         // handleSubmit={ handleSubmit }

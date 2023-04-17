@@ -11,7 +11,7 @@ import AddPark from "../AddPark";
 import DetailsFinds from "../DetailsFinds";
 import DetailsParks from "../DetailsParks";
 import EditFind from "../EditFind";
-import EditPark from "../EditPark"
+import EditPark from "../EditPark";
 
 import Mushrooms from "../CategoryPages/Mushrooms";
 import Flowers from "../CategoryPages/Flowers";
@@ -21,7 +21,7 @@ import Herbs from "../CategoryPages/Herbs";
 import Seeds from "../CategoryPages/Seeds";
 
 const Main = (props) => {
-  const { findsContent, parksContent } = props;
+  const { findsContent, parksContent, handleDelete } = props;
 
     const [finds, setFinds] = useState([]);
     const [parks, setParks] = useState([]);
@@ -43,6 +43,8 @@ const Main = (props) => {
       navigate(`/finds/${userId}/${findId}`);
     };
 
+
+
 // PARKS
     useEffect(() => {
       const getSelectedPark = async () => {
@@ -56,6 +58,8 @@ const Main = (props) => {
     const showparkDetails = (parkId, findId) => {
       navigate(`/parks/${parkId}`);
     };
+
+
 
   return (
     <div id="page-format">
@@ -72,7 +76,8 @@ const Main = (props) => {
           <Route path="/add-find" element={<AddFind  findsContent={findsContent}
                                                      parksContent={parksContent}/>}/>
           <Route path="/add-park" element={<AddPark parksContent={parksContent}/>}/>
-          <Route path="/finds/:findId" element={<DetailsFinds findsContent={findsContent}/>}/>
+          <Route path="/finds/:findId" element={<DetailsFinds findsContent={findsContent}
+                                                              handleDelete={ handleDelete }/>}/>
           <Route path="/parks/:parkId" element={<DetailsParks parksContent={parksContent}/>}/>
           <Route path="/edit-find" element={<EditFind findsContent={findsContent}/>}/>
           <Route path="/edit-park" element={<EditPark parksContent={parksContent}/>}/>
