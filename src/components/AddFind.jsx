@@ -1,8 +1,6 @@
 //
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { Client } from "../services/api";
-import axios from "axios";
 
 import forager from "../assets/forager.png";
 

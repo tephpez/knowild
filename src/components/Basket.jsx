@@ -1,8 +1,6 @@
-//
 import React from "react";
-import { Link } from "react-router-dom";
 
-import Client from "../services/api";
+import profpic from "../assets/profpic.png"
 
 function Basket() {
   return (
@@ -10,7 +8,7 @@ function Basket() {
       <div className="section-container basket profPic" id="profile">
         <div className="profileInfo">
           <div className="username">
-            <span>USERNAME</span>
+            <span>TEPHPEZ</span>
           </div>
           <hr></hr>
           <div className="userInfo">
@@ -19,11 +17,9 @@ function Basket() {
             </div>
           </div>
         </div><br></br>
-        <Link to="/edit-profile">
           <div className="profpic-card">
-            <img src="" alt="profile pic"></img>
+            <img src={profpic} alt="profile pic"></img>
           </div>
-        </Link>
       </div>
       <div className="section-container basket" id="my-finds">
         <button className="category-btn"> mushrooms </button>
@@ -41,8 +37,3 @@ function Basket() {
 }
 
 export default Basket;
-
-//  SETUP    //////////////////////////////////////////////////////////////////////////////////////////////
-//  CODE
-//  STYLES
-//  SWEEP

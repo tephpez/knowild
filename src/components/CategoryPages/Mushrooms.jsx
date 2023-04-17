@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Mushrooms ({ findsContent }) {
 
@@ -31,8 +31,3 @@ export default function Mushrooms ({ findsContent }) {
       </>
   )};
 
-
-//  SETUP    //////////////////////////////////////////////////////////////////////////////////////////////
-//  CODE
-//  STYLES
-//  SWEEP

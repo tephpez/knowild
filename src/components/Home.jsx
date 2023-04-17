@@ -2,7 +2,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const Home = ({ parksContent }) => {
-  // const [finds, setFinds] = useState([]);
   const [parks, setParks] = useState([]);
    
   let navigate = useNavigate()
@@ -72,33 +71,3 @@ const Home = ({ parksContent }) => {
 }
 
 export default Home;
-// {parks.map((park, index) => ( 
-// <div className="park-card" key={index} onClick={() => showparkDetails(find.userId, find.id)}> 
-// <p className="park-card-title">{find.name}</p>
-
-
-//  SETUP    //////////////////////////////////////////////////////////////////////////////////////////////
-//  CODE     //////////////////////////////////////////////////////////////////////////////////////////////
-//  STYLES   //////////////////////////////////////////////////////////////////////////////////////////////
-//  MAPPED         
-//  SWEEP
-
-// sequelize model:generate --name User --attributes name:string,password:string,currentLocation:string,profPic:text
-// sequelize model:generate --name Park --attributes name:string,mapUrl:text,hours:text,state:string,address:string,city:string,state:string
-// sequelize model:generate --name Find --attributes commonName:string,botanicalName:string,benefits:text,category:string,poisonWarning:string,dateFound:dateOnly,notes:text,picOne:text,picTwo:text,picThree:text,picFour:text,picFive:text,mapsLink:text,abundanceRating:integer,locationDesc:text,landmarks:string,userId:integer,parkId:integer
-
-
-
-  // useEffect(() => {
-  //   const getSelectedFind = async () => {
-  //     if (findsContent) {
-  //       let selectedFind = findsContent
-  //       setFinds(selectedFind);
-  //     }
-  //   };
-  //   getSelectedFind();
-  // }, [findsContent]);
-
-  // const showFindDetails = (userId, findId) => {
-  //   navigate(`/finds/${userId}/${findId}`);
-  // };
