@@ -104,9 +104,6 @@ function App() {
         handleDelete={ handleDelete }
         getData={getData}
         parksContent={ parksContent }
-        // updatePark={ updatePark }
-        // parksFormData={ parksFormData }
-
         />
       <Footer/>
     </div>
