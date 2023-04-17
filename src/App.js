@@ -36,18 +36,18 @@ function App() {
 
   let navigate = useNavigate();
 
+  // READ
   const getData = () => {
     Client.get(`/api/finds`).then((res) => {
       // console.log(res.data)
       setFindsContent(res.data);
     });
   };
-  
   useEffect(() => {
     getData();
   }, []);
 
-
+  // DELETE
   const handleDelete = (findId) => {
     // console.log(id);
     Client.delete(`/api/finds/${findId}`).then(() => {
@@ -56,17 +56,8 @@ function App() {
     navigate("/finds");
   };
 
-  // const handleChange = (e) => {
-  //   setFindsFormData ({ ...findsFormData, [e.target.id]: e.target.value });
-  // };
 
-  // const handleSubmit = async (e, findId) => {
-  //   e.preventDefault();
-  //   Client.put(`/api/finds/${findId}`, findsFormData).then(() => {
-  //     navigate("/basket");
-  //     getData();
-  //   });
-  // };
+
 
 
   ///////////////////// PARKS
@@ -111,12 +102,7 @@ function App() {
       <Main 
         findsContent={ findsContent }
         handleDelete={ handleDelete }
-
-        // updateFind={ updateFind }
-        // findsFormData={ findsFormData }
-        // handleSubmit={ handleSubmit }
-        // handleChange={ handleChange }
-
+        getData={getData}
         parksContent={ parksContent }
         // updatePark={ updatePark }
         // parksFormData={ parksFormData }

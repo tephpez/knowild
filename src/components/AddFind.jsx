@@ -30,14 +30,11 @@ const AddFind = ({ findsContent, parksContent }) => {
 
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
-    // console.log(formValues);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formValues);
     const res = await Client.post(`api/finds/${id}`, formValues);
-    console.log(res.data);
     setCreateFind(res.data);
   };
 
@@ -175,7 +172,6 @@ const AddFind = ({ findsContent, parksContent }) => {
                 className="form-input"
               >
                 <option value=""></option>
-                {console.log(parksContent)}
                 {parksContent.map((park) => (
                     <option value={park.id}> {park.name} </option>
                     ))}
@@ -300,22 +296,6 @@ const AddFind = ({ findsContent, parksContent }) => {
               submit
             </button>
           </form>
-          {/* {createFind && (
-            <div>
-              <h2>{createFind.commonName}</h2>
-              <p>{createFind.botanicalName}</p>
-              <p>{createFind.benefits}</p>
-              <p>{createFind.category}</p>
-              <p>{createFind.poisonWarning}</p>
-              <p>{createFind.dateFound}</p>
-              <p>{createFind.notes}</p>
-              <p>{createFind.picOne}</p>
-              <p>{createFind.mapsLink}</p>
-              <p>{createFind.abundanceRating}</p>
-              <p>{createFind.locationDesc}</p>
-              <p>{createFind.landmarks}</p>
-            </div>
-          )} */}
         </div>
       </div>
       <div>

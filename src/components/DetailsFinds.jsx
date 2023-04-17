@@ -37,13 +37,12 @@ const DetailsFinds = ( props ) => {
             <div className="userInfo botanical">
               <div>
                 <span className="find-value">
-                  {" "}
-                  {findDetails.botanicalName}{" "}
+                  {findDetails.botanicalName}
                 </span>
               </div>
               <br></br>
 
-              <Link to="/edit-find">
+              <Link to={"/edit-find/"+findDetails.id}>
                 <button className="app-btn earth"> edit find </button>
               </Link>
               <button
@@ -51,7 +50,7 @@ const DetailsFinds = ( props ) => {
                 id="btn-delete"
                 onClick={() => props.handleDelete(findDetails.id)}
               >
-                DELETE
+                delete
               </button>
             </div>
           </div>

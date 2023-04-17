@@ -21,7 +21,7 @@ import Herbs from "../CategoryPages/Herbs";
 import Seeds from "../CategoryPages/Seeds";
 
 const Main = (props) => {
-  const { findsContent, parksContent, handleDelete } = props;
+  const { findsContent, parksContent, handleDelete, getData } = props;
 
     const [finds, setFinds] = useState([]);
     const [parks, setParks] = useState([]);
@@ -79,7 +79,9 @@ const Main = (props) => {
           <Route path="/finds/:findId" element={<DetailsFinds findsContent={findsContent}
                                                               handleDelete={ handleDelete }/>}/>
           <Route path="/parks/:parkId" element={<DetailsParks parksContent={parksContent}/>}/>
-          <Route path="/edit-find" element={<EditFind findsContent={findsContent}/>}/>
+          <Route path="/edit-find/:findId" element={<EditFind findsContent={findsContent}
+                                                      parksContent={parksContent}
+                                                      getData={getData}/>}/>
           <Route path="/edit-park" element={<EditPark parksContent={parksContent}/>}/>
 
 
