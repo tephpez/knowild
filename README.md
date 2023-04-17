@@ -40,12 +40,12 @@ Go wild - with Knowild!
 
 ## FUTURE UPDATES
 I would love to add some depth to this site, as the functionality right now is rather basic.
-Some things I would like to implement are:<br>
-    - auth to allow multiple users to share their finds, growing the archive and potentially community!<br>
-    - embedding map functionality - each user can have their own map of all their finds<br>
-    - 3rd party plant resource integrated into the site for added research abilities<br>
-    - search function so that users can target a specific thing they're looking for <br>
-    - sort finds by season so user can know what's available in their area right now<br>
+Some things I would like to implement are:<br><br>
+- auth to allow multiple users to share their finds, growing the archive and potentially community!<br>
+- embedding map functionality - each user can have their own map of all their finds<br>
+- 3rd party plant resource integrated into the site for added research abilities<br>
+- search function so that users can target a specific thing they're looking for <br>
+- sort finds by season so user can know what's available in their area right now<br>
 ## GETTING STARTED
 ###  FRONTEND
 - `Fork` and `Clone`
