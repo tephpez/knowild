@@ -57,13 +57,13 @@ const Home = ({ parksContent }) => {
       </div><br></br>
       <hr style={{borderColor:"#AB8A75", width:"85%"}}></hr><br></br>
       <div className="section-container" id="locations">
-      {parks.map((park, index) => ( 
-        <div className="category-card park" key={index} onClick={() => showParkDetails(park.id)}>
-          <p className="park-card-title">{park.name}</p>
-        </div>
-          )) 
-          .slice(0, 3)
-        } 
+        {parks.map((park, index) => ( 
+          <div className="category-card park" key={index} onClick={() => showParkDetails(park.id)}>
+            <p className="park-card-title">{park.name}</p>
+          </div>
+            )) 
+            .slice(0, 3)
+          } 
       </div>
     </>
   );

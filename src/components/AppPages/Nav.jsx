@@ -1,16 +1,12 @@
 import React, { useState }from "react";
 import { Link } from "react-router-dom";
 
-
-
-
 function Nav() {
   
-
   return (
     <div id="nav">
 
-      <Link to="/all-finds">
+      <Link to="/finds">
         <button className="app-btn earth"> all finds </button>
       </Link>
 

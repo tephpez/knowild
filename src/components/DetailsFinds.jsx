@@ -32,12 +32,12 @@ return (
         <div className="section-container basket profPic" id="details">
           <div className="profileInfo">
             <div className="username">
-              <span>COMMON NAME</span>
+              <span className="find-value"> {findDetails.commonName} </span>
             </div>
             <hr></hr>
             <div className="userInfo botanical">
               <div>
-                <span> BOTANICAL NAME </span>
+                <span className="find-value"> {findDetails.botanicalName} </span>
               </div>
               <br></br>
 
@@ -48,7 +48,7 @@ return (
           </div>
           <br></br>
           <div className="profpic-card">
-            <img src="" alt="find img"></img>
+            <img src={findDetails.picOne} alt="find img"></img>
           </div>
         </div>
         <div className="section-container basket details" id="find-info">
@@ -72,7 +72,7 @@ return (
         <div className="section-container basket details" id="location-info">
           <div>
             <span className="find-key">ABUNDANCE RATING: </span>
-            <span className="find-value"> {findDetails.abundanceRating} </span>
+            <span className="find-value"> {findDetails.abundanceRating}/10 </span>
 
             <br></br>
             <br></br>
@@ -87,7 +87,7 @@ return (
             <br></br>
             <br></br>
           </div>
-          <button className="app-btn rust submit"> FIND ME </button>
+          <a href={findDetails.mapsLink} className="button"><button className="app-btn rust submit"> FIND ME </button></a>
         </div>
       </div>
       <div>
