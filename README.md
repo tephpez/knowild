@@ -4,8 +4,8 @@ Spend less time hunting and more time gathering using Knowild - a forager's bff 
 ![KNOWILD SCREENSHOT](https://i.imgur.com/0EHzsph.png)
 
 # DESCRIPTION
-Knowild is a foraging tracking app that will help you gather all the goods you need this season!
-Explore new parks in your area, discover new plants, eat fresh (and free!). 
+Knowild is a foraging tracking app that will help you gather all the goods you need this season!<br>
+Explore new parks in your area, discover new plants, eat fresh (and free!). <br>
 Go wild - with Knowild!
 
 ## FEATURES
@@ -35,17 +35,17 @@ Go wild - with Knowild!
 - Photoshop
 
 ## SOCIALS
-**Github**: https://www.github.com/tephpez
+**Github**: https://www.github.com/tephpez<br>
 **LinkedIn**: https://www.linkedin.com/in/tephpez/
 
 ## FUTURE UPDATES
 I would love to add some depth to this site, as the functionality right now is rather basic.
-Some things I would like to implement are:
-    - auth to allow multiple users to share their finds, growing the archive and potentially community!
-    - embedding map functionality - each user can have their own map of all their finds
-    - 3rd party plant resource integrated into the site for added research abilities
-    - search function so that users can target a specific thing they're looking for 
-    - sort finds by season so user can know what's available in their area right now
+Some things I would like to implement are:<br>
+    - auth to allow multiple users to share their finds, growing the archive and potentially community!<br>
+    - embedding map functionality - each user can have their own map of all their finds<br>
+    - 3rd party plant resource integrated into the site for added research abilities<br>
+    - search function so that users can target a specific thing they're looking for <br>
+    - sort finds by season so user can know what's available in their area right now<br>
 ## GETTING STARTED
 ###  FRONTEND
 - `Fork` and `Clone`
@@ -54,9 +54,10 @@ Some things I would like to implement are:
 - `npm i react-router-dom`
 - `npm i axios`
 - `npm start`
-## CREDITS/RESOURCES
+## CREDITS
 - IMAGES
     - [botanicals](https://www.ostaravermouth.com/)
     - [forager](https://www.etsy.com/listing/818318922/mushroom-forager-art-foraging-poster)
     - [sunflower](https://www.istockphoto.com/vector/sketch-floral-decorative-set-sunflower-drawings-black-and-white-with-line-art-gm1258043981-368884157)<br>
-- [WebDev Simplified](https://courses.webdevsimplified.com/)
+- RESOURCES
+    - [WebDev Simplified](https://courses.webdevsimplified.com/)
