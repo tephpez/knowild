@@ -1,20 +1,38 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-import Client from "../../services/api";
+export default function Flowers ({ findsContent }) {
 
-function Flowers () {
-    return(
-        <div>
-THIS IS Flowers PAGE
-        </div>
-    );
-};
+  let navigate = useNavigate()
 
-export default Flowers;
+  const showFindDetails = (findId) => {
+    navigate(`/finds/${findId}`);
+  };
+  
+  return (
+    <>
+      <div className="basket scroll cat-container">
+        <span className="park-card-title state-title">FLOWERS</span>
+        <hr></hr>
+        {findsContent
+          .filter((find) => find.category === 'flowers')
+          .map((find, index) => ( 
+            <div className="state-park-card categories" key={index} onClick={() => showFindDetails(find.id)}>
+              <div className="profpic-card category-pic">
+                <img src={find.picOne} alt="find-img"></img>
+              </div>
+              <div>
+                <p className="park-card-title category-title">{find.commonName}</p>
+              </div>
+            </div>
+            )) 
+          } 
+      </div>
+      </>
+  )};
 
 
 //  SETUP    //////////////////////////////////////////////////////////////////////////////////////////////
-//  CODE     
-//  STYLES   
-//  SWEEP 
+//  CODE
+//  STYLES
+//  SWEEP

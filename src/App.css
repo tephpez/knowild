@@ -267,6 +267,7 @@ height: 300px;
 
 .park-card-title{
   font-weight: 1000;
+  padding: 5px;
 }
 
 .park-img-wrap{
@@ -314,7 +315,7 @@ margin-bottom: 20px;
 }
 
 #details{
-  text-align: center;
+  /* text-align: center; */
 }
 .profPic{
   width: fit-content;
@@ -424,7 +425,7 @@ border-radius: 20px;
 
 
 #date-found{
-  height: 25px;
+  height: 35px;
   font-family: 'Comfortaa', cursive;
 }
 
@@ -488,6 +489,9 @@ border-radius: 20px;
 
 .park-info{
   overflow: hidden;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 1000;
 }
 
 .mapped-img{
@@ -495,3 +499,33 @@ border-radius: 20px;
   height: 50%;
   object-fit: cover;
 }
+
+.categories{
+  background: #909194;
+  min-height: 140px;
+  max-width:400px;
+  display: flex;
+  margin-bottom: 10px;  
+}
+
+.category-pic{
+  margin: 20px;
+  height: 100px;
+  width: 100px;
+}
+
+.category-title{
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+  
+}
+
+.cat-container{
+  width:fit-content;
+  display: flex;
+  flex-direction: column;
+}
+

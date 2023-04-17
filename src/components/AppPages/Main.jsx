@@ -12,7 +12,6 @@ import DetailsFinds from "../DetailsFinds";
 import DetailsParks from "../DetailsParks";
 import EditFind from "../EditFind";
 import EditPark from "../EditPark";
-
 import Mushrooms from "../CategoryPages/Mushrooms";
 import Flowers from "../CategoryPages/Flowers";
 import Fruits from "../CategoryPages/Fruits"
@@ -66,7 +65,6 @@ const Main = (props) => {
       <Nav />
       <div id="component-format" style={{flexDirection: 'column'}}>
         <Routes>
-          
           <Route path="/" element={<Home parksContent={parksContent}/>}/>
           <Route path="/my-basket" element={<Basket 
                                               findsContent={findsContent}
@@ -82,9 +80,8 @@ const Main = (props) => {
           <Route path="/edit-find/:findId" element={<EditFind findsContent={findsContent}
                                                       parksContent={parksContent}
                                                       getData={getData}/>}/>
-          <Route path="/edit-park" element={<EditPark parksContent={parksContent}/>}/>
-
-
+          <Route path="/edit-park/:parkId" element={<EditPark parksContent={parksContent}
+                                                              getData={getData}/>}/>
           <Route path="/mushrooms" element={<Mushrooms findsContent={findsContent} />}/>
           <Route path="/flowers" element={<Flowers findsContent={findsContent} />}/>
           <Route path="/fruits" element={<Fruits findsContent={findsContent} />}/>

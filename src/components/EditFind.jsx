@@ -43,8 +43,9 @@ const EditFind = ({ findsContent, parksContent, getData }) => {
   
 
   const handleChange = (e) => {
-    setFormValues({ ...formValues, [e.target.name]: e.target.value });
+    setFormValues({ ...formValues, [e.target.comonName]: e.target.value });
   };
+  ////////
 
   const handleSubmit = async (e, id) => {
     e.preventDefault();

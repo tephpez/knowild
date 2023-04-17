@@ -19,6 +19,7 @@ export default function AllParks ({ parksContent }) {
           .map((park, index) => ( 
           <div className="state-park-card" key={index} onClick={() => showParkDetails(park.id)}>
             <p className="park-card-title">{park.name}</p>
+            <img className="mapped-img" src={park.parkImg} alt="find-img"></img>
           </div>
             )) 
           } 
@@ -33,6 +34,7 @@ export default function AllParks ({ parksContent }) {
             .map((park, index) => ( 
             <div className="state-park-card" key={index} onClick={() => showParkDetails(park.id)}>
               <p className="park-card-title">{park.name}</p>
+              <img className="mapped-img" src={park.parkImg} alt="find-img"></img>
             </div>
               )) 
             } 
@@ -47,6 +49,7 @@ export default function AllParks ({ parksContent }) {
             .map((park, index) => ( 
             <div className="state-park-card" key={index} onClick={() => showParkDetails(park.id)}>
               <p className="park-card-title">{park.name}</p>
+              <img className="mapped-img" src={park.parkImg} alt="find-img"></img>
             </div>
               )) 
             } 

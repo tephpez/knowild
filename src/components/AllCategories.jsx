@@ -20,6 +20,7 @@ export default function AllCategories ({ findsContent }) {
           .map((find, index) => ( 
           <div className="state-park-card" key={index} onClick={() => showFindDetails(find.id)}>
             <p className="park-card-title">{find.commonName}</p>
+            <img src={find.picOne} alt="find-img"></img>
           </div>
             )) 
           } 
@@ -34,6 +35,7 @@ export default function AllCategories ({ findsContent }) {
           .map((find, index) => ( 
           <div className="state-park-card" key={index} onClick={() => showFindDetails(find.id)}>
             <p className="park-card-title">{find.commonName}</p>
+            <img src={find.picOne} alt="find-img"></img>
           </div>
             )) 
           } 
@@ -48,6 +50,7 @@ export default function AllCategories ({ findsContent }) {
           .map((find, index) => ( 
           <div className="state-park-card" key={index} onClick={() => showFindDetails(find.id)}>
             <p className="park-card-title">{find.commonName}</p>
+            <img src={find.picOne} alt="find-img"></img>
           </div>
             )) 
           } 
@@ -62,6 +65,7 @@ export default function AllCategories ({ findsContent }) {
           .map((find, index) => ( 
           <div className="state-park-card" key={index} onClick={() => showFindDetails(find.id)}>
             <p className="park-card-title">{find.commonName}</p>
+            <img src={find.picOne} alt="find-img"></img>
           </div>
             )) 
           } 
@@ -76,6 +80,7 @@ export default function AllCategories ({ findsContent }) {
           .map((find, index) => ( 
           <div className="state-park-card" key={index} onClick={() => showFindDetails(find.id)}>
             <p className="park-card-title">{find.commonName}</p>
+            <img src={find.picOne} alt="find-img"></img>
 
           </div>
             )) 
@@ -91,9 +96,7 @@ export default function AllCategories ({ findsContent }) {
           .map((find, index) => ( 
           <div className="state-park-card" key={index} onClick={() => showFindDetails(find.id)}>
             <p className="park-card-title">{find.commonName}</p>
-            <div className="profpic-card">
               <img src={find.picOne} alt="find-img"></img>
-            </div>
           </div>
             )) 
           } 

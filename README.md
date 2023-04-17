@@ -1,11 +1,12 @@
 # KNOWILD
-Spend less time hunting and more time gathering with Knowild! <br>
+Spend less time hunting and more time gathering using Knowild - a forager's bff <br>
 
-![KNOWILD SCREENSHOT](screenshot.png)
+![KNOWILD SCREENSHOT](https://i.imgur.com/0EHzsph.png)
 
 ## DESCRIPTION
-
-
+Knowild is a foraging tracking app that will help you gather all the goods you need this season!
+Explore new parks in your area, discover new plants, eat fresh (and free!). 
+Go wild - with Knowild!
 
 # FEATURES
 
@@ -32,13 +33,7 @@ Spend less time hunting and more time gathering with Knowild! <br>
 ## GETTING STARTED
 
 #  BACKEND
-- `Fork` and `Clone`
--  navigate to the cloned repo
-- `npm i`
-- `sequelize db:create`
-- `sequelize db:migrate`
-- `sequelize db:seed:all`
-- `npm run dev`
+
 #  FRONTEND
 - `Fork` and `Clone`
 -  navigate to the cloned repo
@@ -52,6 +47,6 @@ Spend less time hunting and more time gathering with Knowild! <br>
     - [botanicals](https://www.ostaravermouth.com/)
     - [forager](https://www.etsy.com/listing/818318922/mushroom-forager-art-foraging-poster)
     - [sunflower](https://www.istockphoto.com/vector/sketch-floral-decorative-set-sunflower-drawings-black-and-white-with-line-art-gm1258043981-368884157)
-
+- [WebDev Simplified](https://courses.webdevsimplified.com/)
 
 ## SOCIALS

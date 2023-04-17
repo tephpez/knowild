@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 
 import sunflower from "../assets/sunflower.png";
 
-const DetailsParks = ({ parksContent }) => {
+const DetailsParks = ({ parksContent, handleDelete }) => {
   const { parkId } = useParams();
 
   const [parkDetails, setParkDetails] = useState([null]);
@@ -24,24 +24,30 @@ const DetailsParks = ({ parksContent }) => {
   return (
     <div className="details-page">
       <div className="details-container">
-        <Link to="/category">
-          <button className="app-btn rust submit margin"> CATEGORY </button>
-          <br></br>
-        </Link>
-        <br></br>
         <div className="section-container basket profPic" id="details">
           <div className="profileInfo">
             <div className="username">
-              <span className="find-value"> {parkDetails.name} </span>
+              <span >  </span>
+              <a href={parkDetails.website} className="button">
+                {parkDetails.name} 
+              </a>
             </div>
             <hr></hr>
             <div className="userInfo botanical">
               <div></div>
               <br></br>
+              <br></br>
 
-              <Link to="/edit-find">
-                <button className="app-btn earth"> edit park </button>
+              <Link to="/edit-park">
+                <button className="app-btn earth" style={{marginBottom: "10px"}}> edit park </button>
               </Link>
+              <button
+                className="app-btn rust"
+                id="btn-delete"
+                onClick={() => handleDelete(parkDetails.id)}
+              >
+                delete
+              </button>
             </div>
           </div>
           <br></br>

@@ -23,11 +23,6 @@ const DetailsFinds = ( props ) => {
   return (
     <div className="details-page">
       <div className="details-container">
-        <Link to="/category">
-          <button className="app-btn rust submit margin"> CATEGORY </button>
-          <br></br>
-        </Link>
-        <br></br>
         <div className="section-container basket profPic" id="details">
           <div className="profileInfo">
             <div className="username">
