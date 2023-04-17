@@ -27,6 +27,7 @@ const Home = ({ parksContent }) => {
         <Link to="/Mushrooms">
           <div className="category-card" id="mushrooms">
             <span id="category-title"> mushrooms </span>
+            {/* <p>{park.name}</p> */}
           </div>
         </Link>
         <Link to="/Flowers">
@@ -58,8 +59,9 @@ const Home = ({ parksContent }) => {
       <hr style={{borderColor:"#AB8A75", width:"85%"}}></hr><br></br>
       <div className="section-container" id="locations">
         {parks.map((park, index) => ( 
-          <div className="category-card park" key={index} onClick={() => showParkDetails(park.id)}>
+          <div className="category-card park park-info" key={index} onClick={() => showParkDetails(park.id)}>
             <p className="park-card-title">{park.name}</p>
+            <img className="mapped-img" src={park.parkImg} alt="find-img"></img>
           </div>
             )) 
             .slice(0, 3)

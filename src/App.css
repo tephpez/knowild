@@ -485,3 +485,13 @@ border-radius: 20px;
   margin-bottom: 25px;
 
 }
+
+.park-info{
+  overflow: hidden;
+}
+
+.mapped-img{
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
