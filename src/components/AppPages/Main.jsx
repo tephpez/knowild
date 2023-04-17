@@ -72,7 +72,7 @@ const Main = (props) => {
           <Route path="/all-finds" element={<AllCategories findsContent={findsContent} />}/>
           <Route path="/add-find" element={<AddFind  findsContent={findsContent}/>}/>
           <Route path="/add-park" element={<AddPark parksContent={parksContent}/>}/>
-          <Route path="/details" element={<DetailsFinds findsContent={findsContent}/>}/>
+          <Route path="/finds/:findId" element={<DetailsFinds findsContent={findsContent}/>}/>
           <Route path="/parks/:parkId" element={<DetailsParks parksContent={parksContent}/>}/>
           <Route path="/edit-find" element={<EditFind findsContent={findsContent}/>}/>
           <Route path="/edit-park" element={<EditPark parksContent={parksContent}/>}/>

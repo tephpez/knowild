@@ -1,24 +1,27 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import sunflower from "../assets/sunflower.png";
 
-const DetailsFinds = (props) => {
+const DetailsFinds = ({ findsContent }) => {
   const [findDetails, setFindDetails] = useState([null]);
 
-  /* useEffect(() => {
-     const getSelectedFind = async () =>{
-       if (props.findsContent && props.findsContent.length > 0){
-        let selectedFind = props.findContent.find(
-          (find) => movie.id === parseInt(id)
-        );
-        setFindDetails(selectedFind);
-      };
-    }   
-     getSelectedFind();
-   }, [id, props.findContent]);
-*/
-  return (
+  let { findId } = useParams();
+
+  useEffect(() => {
+    const getSelectedFind = async () =>{
+      if (findsContent && findsContent.length > 0){
+      let selectedFind = findsContent.find(
+        (find) => find.id === parseInt(findId)
+      );
+      setFindDetails(selectedFind);
+    };
+  }   
+    getSelectedFind();
+  }, [findId, findsContent]);
+
+
+return (
     <div className="details-page">
       <div className="details-container">
         <Link to="/category">
@@ -51,47 +54,34 @@ const DetailsFinds = (props) => {
         <div className="section-container basket details" id="find-info">
           <div>
             <span className="find-key">DATE FOUND:</span>
-            <span className="find-value"> date goes here </span>
             <span className="find-value"> {findDetails.dateFound} </span>
             <br></br>
             <br></br>
             <span className="find-key">BENEFITS:</span>
-            <span className="find-value"> benefits info goes here </span>
             <span className="find-value"> {findDetails.benefits} </span>
             <br></br>
             <br></br>
             <span className="find-key">POISON WARNING:</span>
-            <span className="find-value"> toxicity info goes here </span>
             <span className="find-value"> {findDetails.poisonWarning} </span>
             <br></br>
             <br></br>
             <span className="find-key">NOTES: </span>
-            <span className="find-value">
-              notes info goes here notes info goes herenotes info goes herenotes
-              info goes herenotes info goes herenotes info goes herenotes info
-              goes here
-            </span>
             <span className="find-value"> {findDetails.notes} </span>
           </div>
         </div>
         <div className="section-container basket details" id="location-info">
           <div>
             <span className="find-key">ABUNDANCE RATING: </span>
-            <span className="find-value"> abundance rating goes here </span>
             <span className="find-value"> {findDetails.abundanceRating} </span>
 
             <br></br>
             <br></br>
             <span className="find-key">LOCATION DESCRIPTION: </span>
-            <span className="find-value">
-              location description info goes here
-            </span>
             <span className="find-value"> {findDetails.locationDesc} </span>
 
             <br></br>
             <br></br>
             <span className="find-key">LANDMARKS:</span>
-            <span className="find-value"> landmark info info goes here </span>
             <span className="find-value"> {findDetails.landmarks} </span>
 
             <br></br>

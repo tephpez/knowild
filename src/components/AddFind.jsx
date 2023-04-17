@@ -6,7 +6,7 @@ import axios from "axios";
 
 import forager from "../assets/forager.png";
 
-const AddFind = () => {
+const AddFind = ({findsContent}) => {
   let id = 1;
   const [createFind, setCreateFind] = useState([]);
   const [formValues, setFormValues] = useState({
@@ -22,16 +22,19 @@ const AddFind = () => {
     abundanceRating: "", //
     locationDesc: "",  //
     landmarks: "",  //
-    username: "",
+    userId: id,
+    parkId: "1",
+    findId: findsContent.id,
   });
 
   const handleChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
-    console.log(formValues);
+    // console.log(formValues);
   };
 
     const handleSubmit = async (e) =>{
       e.preventDefault();
+      console.log(formValues)
       const res = await Client.post(`api/finds/${id}`, formValues);
       console.log(res.data)
       setCreateFind(res.data)
@@ -256,7 +259,7 @@ const AddFind = () => {
                   required
                   type="text"
                   id="find-pic"
-                  name="findPic"
+                  name="picOne"
                   value={formValues.picOne}
                   onChange={handleChange}
                   className="form-input"
@@ -269,6 +272,22 @@ const AddFind = () => {
             </button>
 
           </form>
+          {/* {createFind && (
+            <div>
+              <h2>{createFind.commonName}</h2>
+              <p>{createFind.botanicalName}</p>
+              <p>{createFind.benefits}</p>
+              <p>{createFind.category}</p>
+              <p>{createFind.poisonWarning}</p>
+              <p>{createFind.dateFound}</p>
+              <p>{createFind.notes}</p>
+              <p>{createFind.picOne}</p>
+              <p>{createFind.mapsLink}</p>
+              <p>{createFind.abundanceRating}</p>
+              <p>{createFind.locationDesc}</p>
+              <p>{createFind.landmarks}</p>
+            </div>
+          )} */}
         </div>
       </div>
       <div>
