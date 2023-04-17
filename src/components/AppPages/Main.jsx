@@ -23,7 +23,6 @@ import Seeds from "../CategoryPages/Seeds";
 const Main = (props) => {
   const { findsContent, parksContent } = props;
 
-
     const [finds, setFinds] = useState([]);
     const [parks, setParks] = useState([]);
 
@@ -69,8 +68,9 @@ const Main = (props) => {
                                               findsContent={findsContent}
                                               parksContent={parksContent}/>}/>
           <Route path="/parks" element={<AllParks parksContent={parksContent}/>}/>
-          <Route path="/finds" element={<AllCategories findsContent={findsContent} />}/>
-          <Route path="/add-find" element={<AddFind  findsContent={findsContent}/>}/>
+          <Route path="/finds" element={<AllCategories findsContent={findsContent}/>}/>
+          <Route path="/add-find" element={<AddFind  findsContent={findsContent}
+                                                     parksContent={parksContent}/>}/>
           <Route path="/add-park" element={<AddPark parksContent={parksContent}/>}/>
           <Route path="/finds/:findId" element={<DetailsFinds findsContent={findsContent}/>}/>
           <Route path="/parks/:parkId" element={<DetailsParks parksContent={parksContent}/>}/>

@@ -14,14 +14,14 @@ export default function AllParks ({ parksContent }) {
         <span className="park-card-title state-title">PA</span>
         <hr></hr>
         <div className="scroll-wrap">
-          {parksContent
-            .filter((park) => park.state === 'PA')
-            .map((park, index) => ( 
-            <div className="state-park-card" key={index} onClick={() => showParkDetails(park.id)}>
-              <p className="park-card-title">{park.name}</p>
-            </div>
-              )) 
-            } 
+        {parksContent
+          .filter((park) => park.state === 'PA')
+          .map((park, index) => ( 
+          <div className="state-park-card" key={index} onClick={() => showParkDetails(park.id)}>
+            <p className="park-card-title">{park.name}</p>
+          </div>
+            )) 
+          } 
         </div>
       </div>
       <div className="basket scroll">
@@ -59,6 +59,6 @@ export default function AllParks ({ parksContent }) {
 
 
 //  SETUP    //////////////////////////////////////////////////////////////////////////////////////////////
-//  CODE
-//  STYLES
+//  CODE     //////////////////////////////////////////////////////////////////////////////////////////////
+//  STYLES   //////////////////////////////////////////////////////////////////////////////////////////////
 //  SWEEP

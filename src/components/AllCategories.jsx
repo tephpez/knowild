@@ -1,7 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-function AllCategories() {
+export default function AllCategories ({ findsContent }) {
+
+  let navigate = useNavigate()
+
+  const showFindDetails = (findId) => {
+    navigate(`/finds/${findId}`);
+  };
+  
   return (
     <>
       <div className="basket scroll">
@@ -152,7 +159,6 @@ function AllCategories() {
   );
 }
 
-export default AllCategories;
 
 //  SETUP    //////////////////////////////////////////////////////////////////////////////////////////////
 //  CODE
